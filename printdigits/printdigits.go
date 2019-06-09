@@ -1,7 +1,6 @@
 package main
 
-import "fmt"
-
 func main() {
-	fmt.Println(12345678)
+	a := "0123456789"
+	println(a)
 }

@@ -1,6 +1,9 @@
 package piscine
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 //PrintComb ...
 func PrintComb() {
@@ -17,14 +20,9 @@ func PrintComb() {
 				}
 				if n3 > n2 && n2 > n1 {
 					if n1 == 7 && n2 == 8 && n3 == 9 {
-						fmt.Print(n1)
-						fmt.Print(n2)
-						fmt.Println(n3)
+						fmt.Println(strconv.Itoa(n1) + strconv.Itoa(n2) + strconv.Itoa(n3))
 					} else {
-						fmt.Print(n1)
-						fmt.Print(n2)
-						fmt.Print(n3)
-						fmt.Print(",")
+						fmt.Print(strconv.Itoa(n1) + strconv.Itoa(n2) + strconv.Itoa(n3) + ",")
 					}
 				}
 				n3++

@@ -1,9 +1,9 @@
 package main
 
 import (
-	piscine "./piscine"
+	student "./student"
 )
 
 func main() {
-	piscine.Raid1a(5, 1)
+	student.Raid1a(5, 3)
 }

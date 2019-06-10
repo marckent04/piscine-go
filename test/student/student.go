@@ -2,40 +2,28 @@ package student
 
 import "fmt"
 
-//Raid1c ...
-func Raid1c(x, y int) {
-	hch := make([]string, x)
-	hcb := make([]string, x)
+//Raid1a ...
+func Raid1a(x, y int) {
+	hc := make([]string, x)
 	vc := make([]string, x)
 
-	//horizontal haut
+	//horizontal
 	for i := 0; i < x; i++ {
 		if i == 0 {
-			hch[i] = "A"
+			hc[i] = "o"
 		} else if i == (x - 1) {
-			hch[i] = "A"
+			hc[i] = "0"
 		} else {
-			hch[i] = "B"
-		}
-	}
-
-	//horizontal bas
-	for i := 0; i < x; i++ {
-		if i == 0 {
-			hcb[i] = "C"
-		} else if i == (x - 1) {
-			hcb[i] = "C"
-		} else {
-			hcb[i] = "B"
+			hc[i] = "-"
 		}
 	}
 
 	//verticale
 	for i := 0; i < len(vc); i++ {
 		if i == 0 {
-			vc[i] = "B"
+			vc[i] = "|"
 		} else if i == (len(vc) - 1) {
-			vc[i] = "B"
+			vc[i] = "|"
 		} else {
 			vc[i] = " "
 		}
@@ -43,9 +31,9 @@ func Raid1c(x, y int) {
 
 	for i := 0; i < x; i++ {
 		if i == (x - 1) {
-			fmt.Println(hch[i])
+			fmt.Println(hc[i])
 		} else {
-			fmt.Print(hch[i])
+			fmt.Print(hc[i])
 		}
 	}
 
@@ -59,9 +47,9 @@ func Raid1c(x, y int) {
 	if y > 1 {
 		for i := 0; i < x; i++ {
 			if i == (x - 1) {
-				fmt.Println(hcb[i])
+				fmt.Println(hc[i])
 			} else {
-				fmt.Print(hcb[i])
+				fmt.Print(hc[i])
 			}
 		}
 	}

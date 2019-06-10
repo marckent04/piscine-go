@@ -1,9 +1,7 @@
 package main
 
-import (
-	student "./student"
-)
+import piscine ".."
 
 func main() {
-	student.Raid1c(1, 1)
+	piscine.PrintComb()
 }

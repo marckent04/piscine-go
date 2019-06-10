@@ -4,26 +4,38 @@ import "fmt"
 
 //Raid1a ...verifier si un nombre est negatif
 func Raid1a(x, y int) {
-	hc := make([]string, x)
+	hch := make([]string, x)
+	hcb := make([]string, x)
 	vc := make([]string, x)
 
-	//horizontal
+	//horizontal haut
 	for i := 0; i < x; i++ {
 		if i == 0 {
-			hc[i] = "o"
+			hch[i] = "/"
 		} else if i == (x - 1) {
-			hc[i] = "0"
+			hch[i] = "\\"
 		} else {
-			hc[i] = "-"
+			hch[i] = "*"
+		}
+	}
+
+	//horizontal bas
+	for i := 0; i < x; i++ {
+		if i == 0 {
+			hcb[i] = "\\"
+		} else if i == (x - 1) {
+			hcb[i] = "/"
+		} else {
+			hcb[i] = "*"
 		}
 	}
 
 	//verticale
 	for i := 0; i < len(vc); i++ {
 		if i == 0 {
-			vc[i] = "|"
+			vc[i] = "*"
 		} else if i == (len(vc) - 1) {
-			vc[i] = "|"
+			vc[i] = "*"
 		} else {
 			vc[i] = " "
 		}
@@ -31,9 +43,9 @@ func Raid1a(x, y int) {
 
 	for i := 0; i < x; i++ {
 		if i == (x - 1) {
-			fmt.Println(hc[i])
+			fmt.Println(hch[i])
 		} else {
-			fmt.Print(hc[i])
+			fmt.Print(hch[i])
 		}
 	}
 
@@ -44,11 +56,13 @@ func Raid1a(x, y int) {
 		fmt.Print("\n")
 	}
 
-	for i := 0; i < x; i++ {
-		if i == (x - 1) {
-			fmt.Println(hc[i])
-		} else {
-			fmt.Print(hc[i])
+	if y > 1 {
+		for i := 0; i < x; i++ {
+			if i == (x - 1) {
+				fmt.Println(hcb[i])
+			} else {
+				fmt.Print(hcb[i])
+			}
 		}
 	}
 

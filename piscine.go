@@ -19,7 +19,7 @@ func PrintComb() {
 					if n1 == 7 && n2 == 8 && n3 == 9 {
 						fmt.Print(n1)
 						fmt.Print(n2)
-						fmt.Print(n3)
+						fmt.Println(n3)
 					} else {
 						fmt.Print(n1)
 						fmt.Print(n2)

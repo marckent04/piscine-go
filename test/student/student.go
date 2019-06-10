@@ -1,9 +1,9 @@
-package main
+package student
 
 import "fmt"
 
-//Raid1a ...verifier si un nombre est negatif
-func Raid1a(x, y int) {
+//Raid1c ...
+func Raid1c(x, y int) {
 	hch := make([]string, x)
 	hcb := make([]string, x)
 	vc := make([]string, x)
@@ -11,31 +11,31 @@ func Raid1a(x, y int) {
 	//horizontal haut
 	for i := 0; i < x; i++ {
 		if i == 0 {
-			hch[i] = "/"
+			hch[i] = "A"
 		} else if i == (x - 1) {
-			hch[i] = "\\"
+			hch[i] = "A"
 		} else {
-			hch[i] = "*"
+			hch[i] = "B"
 		}
 	}
 
 	//horizontal bas
 	for i := 0; i < x; i++ {
 		if i == 0 {
-			hcb[i] = "\\"
+			hcb[i] = "C"
 		} else if i == (x - 1) {
-			hcb[i] = "/"
+			hcb[i] = "C"
 		} else {
-			hcb[i] = "*"
+			hcb[i] = "B"
 		}
 	}
 
 	//verticale
 	for i := 0; i < len(vc); i++ {
 		if i == 0 {
-			vc[i] = "*"
+			vc[i] = "B"
 		} else if i == (len(vc) - 1) {
-			vc[i] = "*"
+			vc[i] = "B"
 		} else {
 			vc[i] = " "
 		}
@@ -66,8 +66,4 @@ func Raid1a(x, y int) {
 		}
 	}
 
-}
-
-func main() {
-	Raid1a(1, 5)
 }

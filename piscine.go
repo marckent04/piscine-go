@@ -22,7 +22,7 @@ func PrintComb() {
 					if n1 == 7 && n2 == 8 && n3 == 9 {
 						fmt.Println(strconv.Itoa(n1) + strconv.Itoa(n2) + strconv.Itoa(n3))
 					} else {
-						fmt.Print(strconv.Itoa(n1) + strconv.Itoa(n2) + strconv.Itoa(n3) + ",")
+						fmt.Print(strconv.Itoa(n1) + strconv.Itoa(n2) + strconv.Itoa(n3) + ", ")
 					}
 				}
 				n3++

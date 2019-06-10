@@ -1,7 +1,9 @@
 package main
 
-import piscine ".."
+import (
+	piscine "./piscine"
+)
 
 func main() {
-	piscine.PrintComb()
+	piscine.Raid1a(5, 1)
 }

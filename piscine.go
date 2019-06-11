@@ -1,10 +1,11 @@
 package piscine
 
-//DivMod ...
-func DivMod(a int, b int, div *int, mod *int) {
-	pdiv := div
-	pmod := mod
+//UltimateDivMod ...
+func UltimateDivMod(a *int, b *int) {
+	pa := a
+	pb := b
 
-	*pdiv = a / b
-	*pmod = a % b
+	*pb = *a % *pb
+
+	*pa = *a / *pb
 }

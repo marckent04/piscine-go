@@ -1,7 +1,13 @@
 package main
 
-import piscine ".."
+import (
+	"fmt"
+
+	piscine ".."
+)
 
 func main() {
-	piscine.PrintComb2()
+	n := 0
+	piscine.PointOne(&n)
+	fmt.Println(n)
 }
